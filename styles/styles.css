@@ -12,24 +12,74 @@ Table of Contents:
     1. Global Styles
 ////////////////////////*/
 
+:root {
+    --main-bg-color-1: #F9C48B;
+    --main-bg-color-2: #F69051;
+    --main-bg-color-3: #F26D40;
+    --main-bg-color-4: #260803;
+    --main-bg-color-5: #FDEFEC;
+    default-margin: 16px;
+}
+
+/* Voor mobiele apparaten */
+
 body {
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
+    font-size: 16px;
+    background-color: var(--main-bg-color-1);
 }
 
 /*////////////////////////
     2. Typography
 ////////////////////////*/
+h2 {
+    font-size: 2em;
+}
 
-
+p {
+    font-size: 1em;
+}
 
 /*////////////////////////
     3. Areas
 ////////////////////////*/
 
+/* 3.1 EM en REM */
+.container {
+    background-color: var(--main-bg-color-5);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    margin: 50px;
+}
 
+/* 3.2 Viewport width en heigt */
+img {
+    width: 100%;
+}
 
+.image-wrapper {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
 
 /*////////////////////////
     2. Media Queries
 ////////////////////////*/
+
+/* Voor tablets */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+        background-color: var(--main-bg-color-2);
+    }
+}
+
+/* Voor schermen */
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 20px;
+        background-color: var(--main-bg-color-3);
+    }
+}
